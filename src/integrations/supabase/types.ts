@@ -44,6 +44,123 @@ export type Database = {
         }
         Relationships: []
       }
+      candidate_activity_log: {
+        Row: {
+          action: string
+          application_id: string
+          created_at: string
+          details: string | null
+          id: string
+        }
+        Insert: {
+          action: string
+          application_id: string
+          created_at?: string
+          details?: string | null
+          id?: string
+        }
+        Update: {
+          action?: string
+          application_id?: string
+          created_at?: string
+          details?: string | null
+          id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "candidate_activity_log_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "internship_applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      candidate_notes: {
+        Row: {
+          application_id: string
+          created_at: string
+          created_by: string | null
+          id: string
+          note: string
+        }
+        Insert: {
+          application_id: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          note: string
+        }
+        Update: {
+          application_id?: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          note?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "candidate_notes_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "internship_applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      candidate_scores: {
+        Row: {
+          application_id: string
+          communication: number
+          created_at: string
+          culture_fit: number
+          id: string
+          learning_ability: number
+          portfolio_score: number
+          problem_solving: number
+          resume_quality: number
+          skills: number
+          total_score: number
+          updated_at: string
+        }
+        Insert: {
+          application_id: string
+          communication?: number
+          created_at?: string
+          culture_fit?: number
+          id?: string
+          learning_ability?: number
+          portfolio_score?: number
+          problem_solving?: number
+          resume_quality?: number
+          skills?: number
+          total_score?: number
+          updated_at?: string
+        }
+        Update: {
+          application_id?: string
+          communication?: number
+          created_at?: string
+          culture_fit?: number
+          id?: string
+          learning_ability?: number
+          portfolio_score?: number
+          problem_solving?: number
+          resume_quality?: number
+          skills?: number
+          total_score?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "candidate_scores_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: true
+            referencedRelation: "internship_applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       customers: {
         Row: {
           acquisition_source: Database["public"]["Enums"]["acquisition_source"]
@@ -260,6 +377,7 @@ export type Database = {
           id: string
           message: string | null
           phone: string
+          pipeline_stage: string
           portfolio_url: string | null
           role_applied: string
           status: string
@@ -275,6 +393,7 @@ export type Database = {
           id?: string
           message?: string | null
           phone: string
+          pipeline_stage?: string
           portfolio_url?: string | null
           role_applied: string
           status?: string
@@ -290,12 +409,126 @@ export type Database = {
           id?: string
           message?: string | null
           phone?: string
+          pipeline_stage?: string
           portfolio_url?: string | null
           role_applied?: string
           status?: string
           updated_at?: string
         }
         Relationships: []
+      }
+      interview_feedback: {
+        Row: {
+          application_id: string
+          communication: number
+          confidence: number
+          created_at: string
+          decision: string
+          id: string
+          interview_id: string | null
+          learning_ability: number
+          notes: string | null
+          skills: number
+          updated_at: string
+        }
+        Insert: {
+          application_id: string
+          communication?: number
+          confidence?: number
+          created_at?: string
+          decision?: string
+          id?: string
+          interview_id?: string | null
+          learning_ability?: number
+          notes?: string | null
+          skills?: number
+          updated_at?: string
+        }
+        Update: {
+          application_id?: string
+          communication?: number
+          confidence?: number
+          created_at?: string
+          decision?: string
+          id?: string
+          interview_id?: string | null
+          learning_ability?: number
+          notes?: string | null
+          skills?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "interview_feedback_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "internship_applications"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "interview_feedback_interview_id_fkey"
+            columns: ["interview_id"]
+            isOneToOne: false
+            referencedRelation: "interview_schedules"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      interview_schedules: {
+        Row: {
+          application_id: string
+          created_at: string
+          email_sent: boolean
+          id: string
+          interview_date: string
+          interview_time: string
+          interview_type: string
+          interviewer_name: string
+          meeting_link: string | null
+          reminder_30_sent: boolean
+          reminder_5_sent: boolean
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          application_id: string
+          created_at?: string
+          email_sent?: boolean
+          id?: string
+          interview_date: string
+          interview_time: string
+          interview_type?: string
+          interviewer_name?: string
+          meeting_link?: string | null
+          reminder_30_sent?: boolean
+          reminder_5_sent?: boolean
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          application_id?: string
+          created_at?: string
+          email_sent?: boolean
+          id?: string
+          interview_date?: string
+          interview_time?: string
+          interview_type?: string
+          interviewer_name?: string
+          meeting_link?: string | null
+          reminder_30_sent?: boolean
+          reminder_5_sent?: boolean
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "interview_schedules_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "internship_applications"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       page_views: {
         Row: {
