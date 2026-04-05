@@ -58,25 +58,25 @@ const UpcurvEcom = () => (
     <LandingNavbar />
 
     {/* HERO */}
-    <section className="bg-gradient-to-br from-yellow-50 via-white to-yellow-50/20 py-20 sm:py-24 overflow-hidden">
+    <section className="py-20 sm:py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #F0FDF4, #FFFFFF, #F0FDF408)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-yellow-400/10 text-yellow-700 border border-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <ShoppingCart className="h-4 w-4" /> E-Commerce Platform
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
               Launch & Scale Your Own<br />
-              <span className="text-yellow-500">Branded Online Store</span>
+              <span className="text-green-600">Branded Online Store</span>
             </h1>
             <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl">
               Everything you need to create, manage, and grow your online store — from beautiful templates to payment processing and WhatsApp notifications.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#demo" className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
+              <a href="#demo" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Free Trial <ChevronRight className="h-4 w-4" />
               </a>
-              <a href="#features" className="inline-flex items-center gap-2 border border-yellow-200 hover:bg-yellow-50 text-yellow-700 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
+              <a href="#features" className="inline-flex items-center gap-2 border border-green-200 hover:bg-green-50 text-green-700 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
                 See Features
               </a>
             </div>
@@ -105,7 +105,7 @@ const UpcurvEcom = () => (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((s, i) => (
             <AnimatedSection key={s.label} delay={i * 0.1} className="text-center">
-              <div className="text-3xl sm:text-4xl font-black text-yellow-500">{s.value}</div>
+              <div className="text-3xl sm:text-4xl font-black text-green-600">{s.value}</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-1 font-medium">{s.label}</div>
             </AnimatedSection>
           ))}
@@ -117,7 +117,7 @@ const UpcurvEcom = () => (
     <section className="py-16 sm:py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-10 sm:mb-12">
-          <span className="text-yellow-600 text-sm font-semibold uppercase tracking-wide">Simple 4-Step Process</span>
+          <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">Simple 4-Step Process</span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mt-2">Go from Idea to Live Store in Hours</h2>
         </AnimatedSection>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
@@ -138,15 +138,15 @@ const UpcurvEcom = () => (
     <section id="features" className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12 sm:mb-16">
-          <span className="text-yellow-600 text-sm font-semibold uppercase tracking-wide">Full Feature Set</span>
+          <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">Full Feature Set</span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mt-2">Everything to Run a Successful Online Store</h2>
         </AnimatedSection>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <AnimatedCard key={title} delay={i * 0.04}>
-              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 hover:shadow-lg hover:border-yellow-200 transition-all duration-300 h-full group">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-yellow-400/10 group-hover:bg-yellow-500 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
-                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-yellow-600 group-hover:text-white transition-colors duration-300" />
+              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 hover:shadow-lg hover:border-green-200 transition-all duration-300 h-full group">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-green-50 group-hover:bg-green-600 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
+                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-green-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-foreground text-xs sm:text-base mb-1 sm:mb-2">{title}</h3>
                 <p className="text-[10px] sm:text-sm text-muted-foreground leading-relaxed hidden sm:block">{desc}</p>
