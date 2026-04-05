@@ -263,7 +263,7 @@ const Landing = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { value: '15+', label: 'Active Users' },
-              { value: '4', label: 'Products Live' },
+              { value: '6', label: 'Products Live' },
               { value: '3+', label: 'Cities Covered' },
               { value: '99.9%', label: 'Uptime' },
             ].map((stat, i) => (
