@@ -414,6 +414,122 @@ const Landing = () => {
                 </div>
               </motion.div>
             </AnimatedSection>
+
+            {/* Upcurv Wash */}
+            <AnimatedSection delay={0.5}>
+              <motion.div
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                style={{ borderColor: '#eee' }}
+              >
+                <div className="h-1.5" style={{ background: 'linear-gradient(135deg, #0EA5E9, #0284C7)' }} />
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: '#0EA5E915' }}>
+                          <Shirt className="h-5 w-5" style={{ color: '#0EA5E9' }} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#1A1A2E' }}>Upcurv Wash</h3>
+                          <p className="text-sm font-medium" style={{ color: '#888' }}>Laundry & Ironing Shop Management</p>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-5">
+                        <div className="space-y-2">
+                          {[
+                            { icon: Shirt, text: 'Garment Tracking' },
+                            { icon: Tag, text: 'Order Management' },
+                            { icon: MapPin, text: 'Pickup & Delivery' },
+                            { icon: Users, text: 'Customer CRM' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#0EA5E9' }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="space-y-2">
+                          {[
+                            { icon: ShieldCheck, text: 'Billing & Payments' },
+                            { icon: Store, text: 'Multi-Branch Support' },
+                            { icon: TrendingUp, text: 'Business Analytics' },
+                            { icon: Zap, text: 'WhatsApp Alerts' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#1E3A5F' }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <Button className="text-white shrink-0 rounded-full px-6" style={{ backgroundColor: '#0EA5E9' }} asChild>
+                      <Link to="/upcurv-wash">Explore <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatedSection>
+
+            {/* Upcurv Halls */}
+            <AnimatedSection delay={0.6}>
+              <motion.div
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                style={{ borderColor: '#eee' }}
+              >
+                <div className="h-1.5" style={{ background: 'linear-gradient(135deg, #E8A0BF, #C4739E)' }} />
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: '#E8A0BF20' }}>
+                          <Building className="h-5 w-5" style={{ color: '#C4739E' }} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#1A1A2E' }}>Upcurv Halls</h3>
+                          <p className="text-sm font-medium" style={{ color: '#888' }}>Wedding & Event Hall Management</p>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-5">
+                        <div className="space-y-2">
+                          {[
+                            { icon: Building, text: 'Booking Calendar' },
+                            { icon: Tag, text: 'Hall Management' },
+                            { icon: Gift, text: 'Catering Packages' },
+                            { icon: Users, text: 'Guest Management' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#C4739E' }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="space-y-2">
+                          {[
+                            { icon: ShieldCheck, text: 'Payment Tracking' },
+                            { icon: Store, text: 'Multi-Venue Support' },
+                            { icon: TrendingUp, text: 'Revenue Analytics' },
+                            { icon: Zap, text: 'WhatsApp Reminders' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#4A2040' }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <Button className="text-white shrink-0 rounded-full px-6" style={{ backgroundColor: '#C4739E' }} asChild>
+                      <Link to="/upcurv-halls">Explore <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
