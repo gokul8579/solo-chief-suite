@@ -15,7 +15,6 @@ import UpcurvRetail from "./pages/UpcurvRetail";
 import UpcurvPrime from "./pages/UpcurvPrime";
 import UpcurvWash from "./pages/UpcurvWash";
 import UpcurvHalls from "./pages/UpcurvHalls";
-import UpcurvPrime from "./pages/UpcurvPrime";
 import Blogs from "./pages/Blogs";
 import Franchise from "./pages/Franchise";
 import About from "./pages/About";
