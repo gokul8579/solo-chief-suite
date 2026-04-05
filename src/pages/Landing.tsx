@@ -305,7 +305,7 @@ const Landing = () => {
               },
               {
                 name: 'Upcurv Ecom', subtitle: 'Launch & Scale Your Own Branded Online Store',
-                gradient: `linear-gradient(135deg, #F59E0B, #D97706)`, icon: ShoppingCart, link: '/upcurv-ecom', img: ecomHero,
+                gradient: `linear-gradient(135deg, #16A34A, #15803D)`, icon: ShoppingCart, link: '/upcurv-ecom', img: ecomHero,
                 features: ['10 Ready-Made Templates', 'Full Store Customization', 'Banner & Offer Management', 'Coupons & Discounts', 'Order & Delivery Tracking', 'Expense Monitoring', 'Payment Integration'],
               },
               {
