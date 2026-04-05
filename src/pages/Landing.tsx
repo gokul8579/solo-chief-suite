@@ -6,7 +6,7 @@ import { PageViewTracker } from '@/components/landing/PageViewTracker';
 import { AnimatedSection, AnimatedCard } from '@/components/landing/AnimatedSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, CreditCard, Link2, QrCode, BarChart3, Phone, Image, FileText, MessageCircle } from 'lucide-react';
+import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, Tag, Gift, ShieldCheck, QrCode } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import vahanhubHero from '@/assets/vahanhub-hero.png';
@@ -16,11 +16,6 @@ import blogRetailSaas from '@/assets/blog-retail-saas.png';
 import blogFranchiseModel from '@/assets/blog-franchise-model.png';
 import blogCarDealer from '@/assets/blog-car-dealer.png';
 
-const CardColoredName = () => (
-  <span className="font-bold">
-    Upcurv <span style={{ color: '#F9423A' }}>C</span><span style={{ color: '#F59E0B' }}>A</span><span style={{ color: '#3B82F6' }}>R</span><span style={{ color: '#22C55E' }}>D</span>
-  </span>
-);
 
 const BRAND = '#F9423A';
 
@@ -358,7 +353,7 @@ const Landing = () => {
               </AnimatedSection>
             ))}
 
-            {/* Upcurv CARD - Special Product */}
+            {/* Upcurv Prime */}
             <AnimatedSection delay={0.4}>
               <motion.div
                 whileHover={{ y: -4 }}
@@ -366,26 +361,41 @@ const Landing = () => {
                 className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
                 style={{ borderColor: '#eee' }}
               >
-                <div className="h-1.5" style={{ background: 'linear-gradient(90deg, #F9423A, #F59E0B, #3B82F6, #22C55E)' }} />
+                <div className="h-1.5" style={{ background: `linear-gradient(135deg, ${BRAND}, #FF6B6B)` }} />
                 <div className="p-6 sm:p-8 lg:p-10">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #F9423A15, #22C55E15)' }}>
-                          <CreditCard className="h-5 w-5" style={{ color: BRAND }} />
+                        <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: `${BRAND}15` }}>
+                          <Tag className="h-5 w-5" style={{ color: BRAND }} />
                         </div>
                         <div>
-                          <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#1A1A2E' }}><CardColoredName /></h3>
-                          <p className="text-sm font-medium" style={{ color: '#888' }}>Smart Digital Card + Bio Link + Business Page</p>
+                          <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#1A1A2E' }}>
+                            Upcurv <span className="px-1.5 py-0.5 rounded text-white text-sm font-bold" style={{ backgroundColor: BRAND }}>prime</span>
+                          </h3>
+                          <p className="text-sm font-medium" style={{ color: '#888' }}>Smarter Payments. Real Savings.</p>
                         </div>
                       </div>
                       <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-5">
                         <div className="space-y-2">
                           {[
-                            { icon: CreditCard, text: 'Digital Business Card' },
-                            { icon: Link2, text: 'Unlimited Smart Links' },
-                            { icon: FileText, text: 'Lead Collection Form' },
-                            { icon: QrCode, text: 'QR Code Sharing' },
+                            { icon: QrCode, text: 'Scan & Pay at Stores' },
+                            { icon: Tag, text: 'Instant Discounts' },
+                            { icon: Gift, text: 'Cashback Rewards' },
+                            { icon: MapPin, text: 'Nearby Partner Stores' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: BRAND }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="space-y-2">
+                          {[
+                            { icon: ShieldCheck, text: 'Secure UPI Payments' },
+                            { icon: Store, text: 'Multi-Category Stores' },
+                            { icon: TrendingUp, text: 'Savings Analytics' },
+                            { icon: Zap, text: 'Instant Confirmations' },
                           ].map(({ icon: Icon, text }) => (
                             <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
                               <Icon className="h-4 w-4 shrink-0" style={{ color: '#22C55E' }} />
@@ -393,23 +403,10 @@ const Landing = () => {
                             </div>
                           ))}
                         </div>
-                        <div className="space-y-2">
-                          {[
-                            { icon: Store, text: 'Business Service Showcase' },
-                            { icon: Image, text: 'Portfolio & Gallery' },
-                            { icon: BarChart3, text: 'Click Analytics' },
-                            { icon: Phone, text: 'WhatsApp & Direct Call' },
-                          ].map(({ icon: Icon, text }) => (
-                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
-                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#3B82F6' }} />
-                              {text}
-                            </div>
-                          ))}
-                        </div>
                       </div>
                     </div>
                     <Button className="text-white shrink-0 rounded-full px-6" style={{ backgroundColor: BRAND }} asChild>
-                      <a href="https://card.upcurv.in/" target="_self">Explore <ArrowRight className="ml-2 h-4 w-4" /></a>
+                      <Link to="/upcurv-prime">Explore <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                   </div>
                 </div>
