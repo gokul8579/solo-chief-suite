@@ -12,6 +12,7 @@ import Landing from "./pages/Landing";
 import Vahanhub from "./pages/Vahanhub";
 import UpcurvEcom from "./pages/UpcurvEcom";
 import UpcurvRetail from "./pages/UpcurvRetail";
+import UpcurvPrime from "./pages/UpcurvPrime";
 import Blogs from "./pages/Blogs";
 import Franchise from "./pages/Franchise";
 import About from "./pages/About";
@@ -51,6 +52,7 @@ const App = () => (
             <Route path="/vahanhub" element={<Vahanhub />} />
             <Route path="/upcurv-ecom" element={<UpcurvEcom />} />
             <Route path="/upcurv-retail" element={<UpcurvRetail />} />
+            <Route path="/upcurv-prime" element={<UpcurvPrime />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
