@@ -52,7 +52,7 @@ const UpcurvWash = () => (
       path="/upcurv-wash"
     />
     <PageViewTracker title="Upcurv Wash" />
-    <LandingNavbar />
+    <LandingNavbar logoColor="#0EA5E9" />
 
     {/* HERO */}
     <section className="py-20 sm:py-24 overflow-hidden" style={{ background: `linear-gradient(135deg, ${PRIMARY}08, #EFF6FF, ${PRIMARY}05)` }}>

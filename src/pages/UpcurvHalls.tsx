@@ -53,7 +53,7 @@ const UpcurvHalls = () => (
       path="/upcurv-halls"
     />
     <PageViewTracker title="Upcurv Halls" />
-    <LandingNavbar />
+    <LandingNavbar logoColor="#C4739E" />
 
     {/* HERO */}
     <section className="py-20 sm:py-24 overflow-hidden" style={{ background: `linear-gradient(135deg, ${PRIMARY}15, #FFF5F9, ${PRIMARY}08)` }}>

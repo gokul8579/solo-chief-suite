@@ -55,7 +55,7 @@ const UpcurvEcom = () => (
       path="/upcurv-ecom"
     />
     <PageViewTracker title="Upcurv Ecom" />
-    <LandingNavbar />
+    <LandingNavbar logoColor="#16A34A" />
 
     {/* HERO */}
     <section className="py-20 sm:py-24 overflow-hidden" style={{ background: 'linear-gradient(135deg, #F0FDF4, #FFFFFF, #F0FDF408)' }}>
