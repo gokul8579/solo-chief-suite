@@ -6,7 +6,7 @@ import { PageViewTracker } from '@/components/landing/PageViewTracker';
 import { AnimatedSection, AnimatedCard } from '@/components/landing/AnimatedSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, Tag, Gift, ShieldCheck, QrCode } from 'lucide-react';
+import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, Tag, Gift, ShieldCheck, QrCode, Shirt, Building } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import vahanhubHero from '@/assets/vahanhub-hero.png';
@@ -195,8 +195,10 @@ const Landing = () => {
                   <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#888' }}>Active Products</p>
                   {[
                     { name: 'Vahanhub', color: '#3B82F6', pct: 85 },
-                    { name: 'Upcurv Ecom', color: '#F59E0B', pct: 70 },
+                    { name: 'Upcurv Ecom', color: '#16A34A', pct: 70 },
                     { name: 'Upcurv Retail', color: '#06B6D4', pct: 60 },
+                    { name: 'Upcurv Prime', color: '#F9423A', pct: 55 },
+                    { name: 'Upcurv Wash', color: '#0EA5E9', pct: 40 },
                   ].map((p, i) => (
                     <div key={p.name} className="mb-2">
                       <div className="flex justify-between text-xs mb-1">
