@@ -36,6 +36,9 @@ import Enquiries from "./pages/Enquiries";
 import Analytics from "./pages/Analytics";
 import InternshipApplications from "./pages/InternshipApplications";
 import Careers from "./pages/Careers";
+import PrimePrivacy from "./pages/PrimePrivacy";
+import PrimeTerms from "./pages/PrimeTerms";
+import PrimeDataDeletion from "./pages/PrimeDataDeletion";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -64,6 +67,9 @@ const App = () => (
             <Route path="/refund" element={<Refund />} />
             <Route path="/franchise" element={<Franchise />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/upcurv-prime/privacy" element={<PrimePrivacy />} />
+            <Route path="/upcurv-prime/terms" element={<PrimeTerms />} />
+            <Route path="/upcurv-prime/data-deletion" element={<PrimeDataDeletion />} />
             <Route path="/auth" element={<Auth />} />
             {/* Admin pages */}
             <Route
