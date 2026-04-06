@@ -57,7 +57,7 @@ const UpcurvRetail = () => (
       path="/upcurv-retail"
     />
     <PageViewTracker title="Upcurv Retail" />
-    <LandingNavbar />
+    <LandingNavbar logoColor="#0EA5E9" />
 
     {/* HERO */}
     <section className="bg-gradient-to-br from-sky-50 via-white to-sky-50/20 py-20 sm:py-24 overflow-hidden">

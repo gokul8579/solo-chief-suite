@@ -67,7 +67,7 @@ const Vahanhub = () => (
       path="/vahanhub"
     />
     <PageViewTracker title="Vahanhub" />
-    <LandingNavbar />
+    <LandingNavbar logoColor="#F97316" />
 
     {/* HERO with Auto-Theme Animations */}
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50/30 py-20 sm:py-24 overflow-hidden">
