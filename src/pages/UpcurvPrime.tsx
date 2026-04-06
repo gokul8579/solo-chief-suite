@@ -134,7 +134,7 @@ const UpcurvPrime = () => {
                       value={name}
                       onChange={e => setName(e.target.value)}
                       className="flex-1 px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2"
-                      style={{ borderColor: '#ddd', focusRingColor: BRAND }}
+                      style={{ borderColor: '#ddd' }}
                     />
                     <input
                       type="tel"
