@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { LandingNavbar } from '@/components/landing/LandingNavbar';
-import { LandingFooter } from '@/components/landing/LandingFooter';
+import { Link } from 'react-router-dom';
 import { AnimatedSection, AnimatedCard } from '@/components/landing/AnimatedSection';
 import { ChatBot } from '@/components/landing/ChatBot';
 import { SEOHead } from '@/components/SEOHead';
@@ -401,7 +401,26 @@ const UpcurvPrime = () => {
         </div>
       </section>
 
-      <LandingFooter />
+      {/* Prime-specific footer */}
+      <footer className="bg-foreground text-white py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2">
+              <UpcurvLogo size={32} color={BRAND} />
+              <span className="text-lg font-bold">Upcurv</span>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded text-white" style={{ backgroundColor: BRAND }}>prime</span>
+            </div>
+            <div className="flex gap-6 text-sm">
+              <a href="/upcurv-prime/privacy" className="text-white/70 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/upcurv-prime/terms" className="text-white/70 hover:text-white transition-colors">Terms of Service</a>
+              <a href="/upcurv-prime/data-deletion" className="text-white/70 hover:text-white transition-colors">Data Deletion</a>
+            </div>
+            <div className="text-white/40 text-xs">
+              © {new Date().getFullYear()} Upcurv Innovations Pvt. Ltd.
+            </div>
+          </div>
+        </div>
+      </footer>
       <ChatBot />
     </div>
   );
