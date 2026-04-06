@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { LandingNavbar } from '@/components/landing/LandingNavbar';
-import { LandingFooter } from '@/components/landing/LandingFooter';
+import { Link } from 'react-router-dom';
 import { AnimatedSection, AnimatedCard } from '@/components/landing/AnimatedSection';
 import { ChatBot } from '@/components/landing/ChatBot';
 import { SEOHead } from '@/components/SEOHead';
