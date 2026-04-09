@@ -98,7 +98,7 @@ export default function Franchise() {
                   { icon: Shield, title: 'Zero Inventory', desc: 'No stock needed' },
                 ].map(({ icon: Icon, title, desc }, i) => (
                   <AnimatedCard key={title} delay={i * 0.1}>
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-5 md:hover:bg-white/10 transition-colors">
                       <Icon className="h-8 w-8 text-[#F9423A] mb-3" />
                       <p className="font-semibold text-white">{title}</p>
                       <p className="text-sm text-white/60 mt-1">{desc}</p>
