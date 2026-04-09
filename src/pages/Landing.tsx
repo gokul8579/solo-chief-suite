@@ -3,7 +3,7 @@ import { LandingFooter } from '@/components/landing/LandingFooter';
 import { ChatBot } from '@/components/landing/ChatBot';
 import { SEOHead } from '@/components/SEOHead';
 import { PageViewTracker } from '@/components/landing/PageViewTracker';
-import { AnimatedSection, AnimatedCard } from '@/components/landing/AnimatedSection';
+import { AnimatedSection, AnimatedCard, isMobileDevice } from '@/components/landing/AnimatedSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, Tag, Gift, ShieldCheck, QrCode, Shirt, Building, Code2 } from 'lucide-react';
@@ -316,9 +316,9 @@ const Landing = () => {
             ].map((product, i) => (
               <AnimatedSection key={product.name} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ y: -4 }}
+                  whileHover={isMobileDevice() ? undefined : { y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                  className="bg-white rounded-2xl shadow-sm border overflow-hidden md:hover:shadow-xl transition-all duration-300"
                   style={{ borderColor: '#eee' }}
                 >
                   <div className="h-1.5" style={{ background: product.gradient }} />
@@ -358,9 +358,9 @@ const Landing = () => {
             {/* Upcurv Prime */}
             <AnimatedSection delay={0.4}>
               <motion.div
-                whileHover={{ y: -4 }}
+                whileHover={isMobileDevice() ? undefined : { y: -4 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden md:hover:shadow-xl transition-all duration-300"
                 style={{ borderColor: '#eee' }}
               >
                 <div className="h-1.5" style={{ background: `linear-gradient(135deg, ${BRAND}, #FF6B6B)` }} />
@@ -418,9 +418,9 @@ const Landing = () => {
             {/* Upcurv Wash */}
             <AnimatedSection delay={0.5}>
               <motion.div
-                whileHover={{ y: -4 }}
+                whileHover={isMobileDevice() ? undefined : { y: -4 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden md:hover:shadow-xl transition-all duration-300"
                 style={{ borderColor: '#eee' }}
               >
                 <div className="h-1.5" style={{ background: 'linear-gradient(135deg, #0EA5E9, #0284C7)' }} />
@@ -476,9 +476,9 @@ const Landing = () => {
             {/* Upcurv Halls */}
             <AnimatedSection delay={0.6}>
               <motion.div
-                whileHover={{ y: -4 }}
+                whileHover={isMobileDevice() ? undefined : { y: -4 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden md:hover:shadow-xl transition-all duration-300"
                 style={{ borderColor: '#eee' }}
               >
                 <div className="h-1.5" style={{ background: 'linear-gradient(135deg, #E8A0BF, #C4739E)' }} />
@@ -534,9 +534,9 @@ const Landing = () => {
             {/* Upcurv Labs */}
             <AnimatedSection delay={0.7}>
               <motion.div
-                whileHover={{ y: -4 }}
+                whileHover={isMobileDevice() ? undefined : { y: -4 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden md:hover:shadow-xl transition-all duration-300"
                 style={{ borderColor: '#eee' }}
               >
                 <div className="h-1.5" style={{ background: 'linear-gradient(135deg, #FFD600, #B8A000)' }} />
@@ -620,7 +620,7 @@ const Landing = () => {
               { icon: Shield, label: 'High Scalability' },
             ].map(({ icon: Icon, label }, i) => (
               <AnimatedCard key={label} delay={i * 0.08}>
-                <div className="rounded-2xl p-5 text-center border transition-all duration-300 hover:border-opacity-30"
+                <div className="rounded-2xl p-5 text-center border transition-all duration-300 md:hover:border-opacity-30"
                   style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.1)' }}>
                   <Icon className="h-6 w-6 mx-auto mb-2" style={{ color: BRAND }} />
                   <p className="text-sm font-medium text-white">{label}</p>
@@ -654,8 +654,8 @@ const Landing = () => {
               { icon: TrendingUp, title: 'Franchise Revenue Model', desc: 'Unique city-based SaaS franchise opportunity.' },
             ].map(({ icon: Icon, title, desc }, i) => (
               <AnimatedCard key={title} delay={i * 0.08}>
-                <motion.div
-                  whileHover={{ y: -6, boxShadow: '0 20px 40px -12px rgba(0,0,0,0.1)' }}
+              <motion.div
+                  whileHover={isMobileDevice() ? undefined : { y: -6, boxShadow: '0 20px 40px -12px rgba(0,0,0,0.1)' }}
                   className="bg-white rounded-2xl border p-7 h-full transition-all"
                   style={{ borderColor: '#eee' }}
                 >
@@ -686,15 +686,15 @@ const Landing = () => {
               { title: '5 Features Every Car Dealer Needs', excerpt: 'From real-time inventory to public marketplace listings — the must-have tools for modern dealers.', date: 'Jan 28, 2026', tag: 'Product', img: blogCarDealer },
             ].map((post, i) => (
               <AnimatedCard key={post.title} delay={i * 0.1}>
-                <Link to="/blogs" className="block bg-white rounded-2xl border overflow-hidden hover:shadow-lg transition-all h-full group" style={{ borderColor: '#eee' }}>
+                <Link to="/blogs" className="block bg-white rounded-2xl border overflow-hidden md:hover:shadow-lg transition-all h-full group" style={{ borderColor: '#eee' }}>
                   <div className="h-40 relative overflow-hidden">
-                    <img src={post.img} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={post.img} alt={post.title} className="w-full h-full object-cover md:group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                     <span className="absolute top-3 left-3 text-xs font-medium px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm" style={{ color: BRAND }}>{post.tag}</span>
                   </div>
                   <div className="p-6">
                     <p className="text-xs mb-2" style={{ color: '#999' }}>{post.date}</p>
-                    <h3 className="font-bold mb-2 group-hover:text-[#F9423A] transition-colors" style={{ color: '#1A1A2E' }}>{post.title}</h3>
+                    <h3 className="font-bold mb-2 md:group-hover:text-[#F9423A] transition-colors" style={{ color: '#1A1A2E' }}>{post.title}</h3>
                     <p className="text-sm" style={{ color: '#666' }}>{post.excerpt}</p>
                   </div>
                 </Link>

@@ -98,7 +98,7 @@ export default function Franchise() {
                   { icon: Shield, title: 'Zero Inventory', desc: 'No stock needed' },
                 ].map(({ icon: Icon, title, desc }, i) => (
                   <AnimatedCard key={title} delay={i * 0.1}>
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-5 md:hover:bg-white/10 transition-colors">
                       <Icon className="h-8 w-8 text-[#F9423A] mb-3" />
                       <p className="font-semibold text-white">{title}</p>
                       <p className="text-sm text-white/60 mt-1">{desc}</p>
@@ -121,7 +121,7 @@ export default function Franchise() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {marketStats.map((stat, i) => (
               <AnimatedCard key={stat.label} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl border border-border p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-2xl border border-border p-6 text-center shadow-sm md:hover:shadow-md transition-shadow">
                   <div className="text-3xl sm:text-4xl font-bold text-[#F9423A] mb-1">{stat.value}</div>
                   <div className="font-semibold text-foreground text-sm">{stat.label}</div>
                   <div className="text-xs text-muted-foreground mt-1">{stat.sub}</div>
@@ -265,7 +265,7 @@ export default function Franchise() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(({ icon: Icon, title, desc, color }, i) => (
               <AnimatedCard key={title} delay={i * 0.08}>
-                <div className="bg-white rounded-xl border border-border p-6 hover:shadow-md transition-shadow h-full">
+                <div className="bg-white rounded-xl border border-border p-6 md:hover:shadow-md transition-shadow h-full">
                   <div className={`w-12 h-12 rounded-xl ${color} flex items-center justify-center mb-4`}>
                     <Icon className="h-6 w-6" />
                   </div>

@@ -144,9 +144,9 @@ const UpcurvEcom = () => (
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <AnimatedCard key={title} delay={i * 0.04}>
-              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 hover:shadow-lg hover:border-green-200 transition-all duration-300 h-full group">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-green-50 group-hover:bg-green-600 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
-                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-green-600 group-hover:text-white transition-colors duration-300" />
+              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 md:hover:shadow-lg md:hover:border-green-200 transition-all duration-300 h-full group">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-green-50 md:group-hover:bg-green-600 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
+                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-green-600 md:group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-foreground text-xs sm:text-base mb-1 sm:mb-2">{title}</h3>
                 <p className="text-[10px] sm:text-sm text-muted-foreground leading-relaxed hidden sm:block">{desc}</p>

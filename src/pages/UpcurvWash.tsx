@@ -141,7 +141,7 @@ const UpcurvWash = () => (
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <AnimatedCard key={title} delay={i * 0.04}>
-              <div className="bg-white rounded-xl border p-3 sm:p-6 hover:shadow-lg transition-all duration-300 h-full group" style={{ borderColor: '#eee' }}>
+              <div className="bg-white rounded-xl border p-3 sm:p-6 md:hover:shadow-lg transition-all duration-300 h-full group" style={{ borderColor: '#eee' }}>
                 <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300" style={{ backgroundColor: `${PRIMARY}10` }}>
                   <Icon className="h-4 w-4 sm:h-6 sm:w-6" style={{ color: PRIMARY }} />
                 </div>
