@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
+const isMobileDevice = () => typeof window !== 'undefined' && window.innerWidth < 768;
+
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
@@ -20,17 +22,19 @@ export const AnimatedSection = ({ children, className, delay = 0 }: AnimatedSect
 );
 
 export const AnimatedCard = ({ children, className, delay = 0 }: AnimatedSectionProps) => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const mobile = isMobileDevice();
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.4, delay, ease: 'easeOut' }}
-      whileHover={isMobile ? undefined : { y: -4, transition: { duration: 0.2 } }}
+      whileHover={mobile ? undefined : { y: -4, transition: { duration: 0.2 } }}
       className={className}
     >
       {children}
     </motion.div>
   );
 };
+
+export { isMobileDevice };
