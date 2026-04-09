@@ -265,7 +265,7 @@ export default function Franchise() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(({ icon: Icon, title, desc, color }, i) => (
               <AnimatedCard key={title} delay={i * 0.08}>
-                <div className="bg-white rounded-xl border border-border p-6 hover:shadow-md transition-shadow h-full">
+                <div className="bg-white rounded-xl border border-border p-6 md:hover:shadow-md transition-shadow h-full">
                   <div className={`w-12 h-12 rounded-xl ${color} flex items-center justify-center mb-4`}>
                     <Icon className="h-6 w-6" />
                   </div>
