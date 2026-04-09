@@ -6,7 +6,7 @@ import { PageViewTracker } from '@/components/landing/PageViewTracker';
 import { AnimatedSection, AnimatedCard } from '@/components/landing/AnimatedSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, Tag, Gift, ShieldCheck, QrCode, Shirt, Building } from 'lucide-react';
+import { Cloud, Shield, Smartphone, Server, MapPin, TrendingUp, Car, ShoppingCart, Store, ArrowRight, CheckCircle2, Star, Users, Zap, Tag, Gift, ShieldCheck, QrCode, Shirt, Building, Code2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import vahanhubHero from '@/assets/vahanhub-hero.png';
@@ -263,7 +263,7 @@ const Landing = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { value: '15+', label: 'Active Users' },
-              { value: '6', label: 'Products Live' },
+              { value: '7', label: 'Products Live' },
               { value: '3+', label: 'Cities Covered' },
               { value: '99.9%', label: 'Uptime' },
             ].map((stat, i) => (
@@ -525,6 +525,64 @@ const Landing = () => {
                     </div>
                     <Button className="text-white shrink-0 rounded-full px-6" style={{ backgroundColor: '#C4739E' }} asChild>
                       <Link to="/upcurv-halls">Explore <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatedSection>
+
+            {/* Upcurv Labs */}
+            <AnimatedSection delay={0.7}>
+              <motion.div
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+                className="bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300"
+                style={{ borderColor: '#eee' }}
+              >
+                <div className="h-1.5" style={{ background: 'linear-gradient(135deg, #FFD600, #B8A000)' }} />
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: '#FFD60020' }}>
+                          <Code2 className="h-5 w-5" style={{ color: '#B8A000' }} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#1A1A2E' }}>Upcurv Labs</h3>
+                          <p className="text-sm font-medium" style={{ color: '#888' }}>Custom Systems & SaaS Development</p>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-6 gap-y-2 mt-5">
+                        <div className="space-y-2">
+                          {[
+                            { icon: Cloud, text: 'Custom Websites' },
+                            { icon: Server, text: 'Admin Dashboards' },
+                            { icon: ShoppingCart, text: 'SaaS Development' },
+                            { icon: Smartphone, text: 'Scalable Architecture' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#B8A000' }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="space-y-2">
+                          {[
+                            { icon: TrendingUp, text: 'Reports & Analytics' },
+                            { icon: Shield, text: 'Enterprise Security' },
+                            { icon: Zap, text: 'Fast Delivery' },
+                            { icon: Users, text: 'Ongoing Support' },
+                          ].map(({ icon: Icon, text }) => (
+                            <div key={text} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
+                              <Icon className="h-4 w-4 shrink-0" style={{ color: '#FFD600' }} />
+                              {text}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <Button className="shrink-0 rounded-full px-6 text-black font-semibold hover:brightness-95" style={{ backgroundColor: '#FFD600' }} asChild>
+                      <Link to="/upcurv-labs">Explore <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                   </div>
                 </div>
