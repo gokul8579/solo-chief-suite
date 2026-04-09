@@ -620,7 +620,7 @@ const Landing = () => {
               { icon: Shield, label: 'High Scalability' },
             ].map(({ icon: Icon, label }, i) => (
               <AnimatedCard key={label} delay={i * 0.08}>
-                <div className="rounded-2xl p-5 text-center border transition-all duration-300 hover:border-opacity-30"
+                <div className="rounded-2xl p-5 text-center border transition-all duration-300 md:hover:border-opacity-30"
                   style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.1)' }}>
                   <Icon className="h-6 w-6 mx-auto mb-2" style={{ color: BRAND }} />
                   <p className="text-sm font-medium text-white">{label}</p>
