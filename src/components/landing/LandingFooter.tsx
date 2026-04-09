@@ -62,6 +62,7 @@ export const LandingFooter = () => {
               <li><Link to="/upcurv-prime" className="hover:text-white transition-colors">Upcurv Prime</Link></li>
               <li><Link to="/upcurv-wash" className="hover:text-white transition-colors">Upcurv Wash</Link></li>
               <li><Link to="/upcurv-halls" className="hover:text-white transition-colors">Upcurv Halls</Link></li>
+              <li><Link to="/upcurv-labs" className="hover:text-white transition-colors">Upcurv Labs</Link></li>
             </ul>
           </div>
 

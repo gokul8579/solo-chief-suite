@@ -15,6 +15,7 @@ import UpcurvRetail from "./pages/UpcurvRetail";
 import UpcurvPrime from "./pages/UpcurvPrime";
 import UpcurvWash from "./pages/UpcurvWash";
 import UpcurvHalls from "./pages/UpcurvHalls";
+import UpcurvLabs from "./pages/UpcurvLabs";
 import Blogs from "./pages/Blogs";
 import Franchise from "./pages/Franchise";
 import About from "./pages/About";
@@ -60,6 +61,7 @@ const App = () => (
             <Route path="/upcurv-prime" element={<UpcurvPrime />} />
             <Route path="/upcurv-wash" element={<UpcurvWash />} />
             <Route path="/upcurv-halls" element={<UpcurvHalls />} />
+            <Route path="/upcurv-labs" element={<UpcurvLabs />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
