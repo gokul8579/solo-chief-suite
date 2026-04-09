@@ -154,7 +154,7 @@ const Careers = () => {
               const Icon = role.icon;
               return (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg transition-shadow">
+                  className="bg-white rounded-2xl p-6 border border-border md:hover:shadow-lg transition-shadow">
                   <div className="w-10 h-10 rounded-xl bg-[#F9423A]/10 flex items-center justify-center mb-4">
                     <Icon className="h-5 w-5 text-[#F9423A]" />
                   </div>

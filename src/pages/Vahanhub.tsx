@@ -117,9 +117,8 @@ const Vahanhub = () => (
             <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl">
               The complete digital platform for automobile dealers — manage inventory, capture leads, schedule test drives, and grow your online presence.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-3">
               <motion.a
-                whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 href="#demo"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -196,9 +195,9 @@ const Vahanhub = () => (
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <AnimatedCard key={title} delay={i * 0.04}>
-              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 hover:shadow-lg hover:border-blue-200 transition-all duration-300 h-full group sm:hover:shadow-lg sm:hover:border-blue-200">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 group-hover:bg-blue-500 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
-                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-blue-500 group-hover:text-white transition-colors duration-300" />
+              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 md:hover:shadow-lg md:hover:border-blue-200 transition-all duration-300 h-full group">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 md:group-hover:bg-blue-500 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
+                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-blue-500 md:group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-foreground text-xs sm:text-base mb-1 sm:mb-2">{title}</h3>
                 <p className="text-[10px] sm:text-sm text-muted-foreground leading-relaxed hidden sm:block">{desc}</p>
@@ -220,7 +219,6 @@ const Vahanhub = () => (
           {useCases.map((uc, i) => (
             <AnimatedCard key={uc.title} delay={i * 0.08}>
               <motion.div
-                whileHover={{ y: -4 }}
                 className="bg-white rounded-xl border border-border p-4 sm:p-6 h-full relative"
               >
                 {uc.badge && <span className="absolute top-2 sm:top-3 right-2 sm:right-3 text-[9px] sm:text-xs bg-blue-500 text-white px-1.5 sm:px-2 py-0.5 rounded-full">{uc.badge}</span>}
