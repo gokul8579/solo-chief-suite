@@ -121,7 +121,7 @@ export default function Franchise() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {marketStats.map((stat, i) => (
               <AnimatedCard key={stat.label} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl border border-border p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-2xl border border-border p-6 text-center shadow-sm md:hover:shadow-md transition-shadow">
                   <div className="text-3xl sm:text-4xl font-bold text-[#F9423A] mb-1">{stat.value}</div>
                   <div className="font-semibold text-foreground text-sm">{stat.label}</div>
                   <div className="text-xs text-muted-foreground mt-1">{stat.sub}</div>
