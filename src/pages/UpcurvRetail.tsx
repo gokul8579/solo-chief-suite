@@ -124,7 +124,7 @@ const UpcurvRetail = () => (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {industries.map((ind, i) => (
             <AnimatedCard key={ind.name} delay={i * 0.06}>
-              <div className="bg-white rounded-xl border border-border p-3 sm:p-4 text-center hover:shadow-md transition-all h-full">
+              <div className="bg-white rounded-xl border border-border p-3 sm:p-4 text-center md:hover:shadow-md transition-all h-full">
                 <div className="text-2xl sm:text-3xl mb-2">{ind.icon}</div>
                 <h3 className="font-semibold text-foreground text-xs sm:text-sm mb-0.5 sm:mb-1">{ind.name}</h3>
                 <p className="text-[9px] sm:text-xs text-muted-foreground">{ind.desc}</p>
@@ -145,9 +145,9 @@ const UpcurvRetail = () => (
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <AnimatedCard key={title} delay={i * 0.04}>
-              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 hover:shadow-lg hover:border-sky-200 transition-all duration-300 h-full group">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-sky-500/10 group-hover:bg-sky-500 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
-                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-sky-500 group-hover:text-white transition-colors duration-300" />
+              <div className="bg-white rounded-xl border border-border p-3 sm:p-6 md:hover:shadow-lg md:hover:border-sky-200 transition-all duration-300 h-full group">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-sky-500/10 md:group-hover:bg-sky-500 flex items-center justify-center mb-2 sm:mb-4 transition-colors duration-300">
+                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-sky-500 md:group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-foreground text-xs sm:text-base mb-1 sm:mb-2">{title}</h3>
                 <p className="text-[10px] sm:text-sm text-muted-foreground leading-relaxed hidden sm:block">{desc}</p>
